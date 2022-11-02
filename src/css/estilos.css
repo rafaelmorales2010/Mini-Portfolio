@@ -1,0 +1,187 @@
+body {
+    font-family: 'VT323', monospace;
+    background-image: url(../imagens/fundo-site.jpg);
+    /*para não deixar a imagem repetir*/
+    background-repeat: no-repeat;
+    /*posiciona a imagem forma completa em nossa tela*/
+    background-size: cover;
+    /*centralizar a imagem */
+    background-position: center;
+
+    /*mudando a cor da fonte*/
+    color: #f3f3f3;
+    /*tamanho da fonte*/
+    font-size: 18px;
+    /*liberando para alinhar e mexer em nosso estilo*/
+    display: flex;
+    /*alinhamanto horizontalmente ao centro*/
+    justify-content: center;
+    /*centralizar verticalmente centro*/
+    align-items: center;
+    /*altura minima respeitando altura*/
+    min-height: 100vh;
+    /*espaçamento interno*/
+    padding: 30px;
+}
+
+.cartao {
+    /*menos preto*/
+    background-color: #070d12;
+    /*largura*/
+    width: 370px;
+    /*borda com cor*/
+    border: 2px solid #e126d9;
+    border-radius: 10px;
+
+    /*Corta o conteúdo que ultrapassa o tamanho da DIV
+    ou seja não deixa passar pelas bordas*/
+    overflow: hidden;
+}
+
+
+.abas img {
+    width: 30px;
+}
+.cartao .conteudo .abas .aba.selecionado{
+    background-color: #262626;
+}
+
+/*pai dos elementos  minhas-informações*/
+.cartao .minhas-informacoes {
+    padding-top: 20px;
+    /*posição dos itens fica em linha um do lado do outro*/
+    display: flex;
+    /*assim coloca em coluna posicionando os elementos embaixo*/
+    flex-direction: column;
+    /*quando utilizo flex-direction column alinha horizontalmente ao centro
+    se for flex-direction row alinha verticalmente*/
+    align-items: center;
+    /*espaçamento entre os elementos*/
+    gap: 10px;  
+}
+
+.cartao .minhas-informacoes .img-perfil {
+    width: 120px;
+    border-radius: 5%;
+    border: 4px  solid #02d08f;
+    
+}
+/*.nome é o pai dos elementos*/
+.cartao .minhas-informacoes .nome {
+    font-size: 30px;
+}
+
+.cartao .minhas-informacoes .cargo {
+    font-size: 25px;
+    color: #b8bbc5;
+}
+
+.cartao .conteudo {
+    margin-top: 10px;
+}
+/*.abas é o pai dos elementos para usar display:flex*/
+.cartao .conteudo .abas {
+    /*colocando os elementos um ao lado do outro*/
+    display: flex;
+
+}
+
+.cartao .conteudo .abas .aba {
+    /*colocando linha 50% pra cada elemento*/
+    width: 50%;
+    /*utilizando display:flex para utilizar justify-content*/
+    display: flex;
+    /*alinhamanto horizontalmente ao centro*/
+    justify-content: center;
+    /*espaçamento externo 10px cima e baixo e 0 direito e esquerdo*/
+    padding: 10px 0;
+    /*mudando cursor*/
+    cursor: pointer;
+    /*transição do hover das abas - .abas:hover .aba:hover */
+    transition: background-color 0.4s ease-in-out;
+}
+
+.cartao .informacoes-abas {
+    background-color: #262626;
+
+}
+
+.cartao .abas:hover .aba:hover {
+    background-color: #414141;
+}
+
+.cartao .informacoes-abas .informacao {
+    min-height: 260px;
+    padding: 15px;
+}
+
+.informacoes-abas .subtitulo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.informacoes-abas .descricao {
+font-size: 23px;
+/*para utilizar scrool tem que limitar tamanho utilizando max-height*/
+max-height: 180px;
+/*para utlizar */
+overflow-y: auto;
+padding-right: 15px;
+}
+
+.informacoes-abas .descricao span {
+    color: #02d08f;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+::-webkit-scrollbar {
+    background:  #e126d9;;
+  }
+
+  ::-webkit-scrollbar-button {
+    background-color: #02d08f;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #414141;
+  }
+
+  .redes-sociais {
+    /*utilizado display flex para poder usar flex- direction*/
+    display: flex;
+    /*colocando embaixo um do outro*/
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    
+  }
+.redes-sociais li a {
+   display: block;
+    width: 200px;
+   
+    text-align: center;
+    font-size: 20px;
+    padding: 15px;
+
+}
+
+.redes-sociais .curriculo {
+    background-color: #02d08f;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.redes-sociais .linkedin {
+    background-color: #1d87bd;
+    color: #ffffff;
+    font-weight: bold;
+
+}
+
+.redes-sociais .github {
+background-color: #545454;
+color: #ffffff;
+font-weight: bold;
+}
+
